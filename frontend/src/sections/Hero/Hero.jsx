@@ -148,7 +148,7 @@ export default function Hero() {
 
 
         <div className="hero-anim absolute bottom-[0] left-1/2 -translate-x-1/2 flex flex-col items-center text-gray-400 z-10 pointer-events-none">
-          <p className="text-sm font-medium tracking-widest mb-2">SCROLL</p>
+          <p className="text-sm font-medium tracking-widest mb-2">SCROLL DOWN ONLY</p>
           <CiCircleChevDown className="text-3xl animate-bounce text-purple-500" />
         </div>
       </section>

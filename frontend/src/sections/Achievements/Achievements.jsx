@@ -26,7 +26,7 @@ export default function Achievements() {
   return (
     // 1. Changed bg-gray-950 to bg-transparent to reveal the global background video
     // 2. Added relative and z-10 to ensure the layout sits strictly above the video layer
-    <section id="achievements" className="relative z-10 min-h-screen bg-transparent flex items-center justify-center px-6 md:px-12 py-24">
+    <section id="achievements" className="relative min-h-screen bg-transparent flex items-center justify-center px-6 md:px-12 py-24">
       
       <div className="w-full max-w-7xl grid grid-cols-1 md:grid-cols-2 gap-12 h-full">
         
