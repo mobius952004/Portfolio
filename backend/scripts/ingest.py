@@ -22,7 +22,7 @@ def ingest():
 
 
     vector_store = VectorStoreService(embeddings)
-    vector_store.delete_collection()
+    # vector_store.delete_collection()
 
     vector_store = VectorStoreService(embeddings)
 

@@ -18,3 +18,8 @@ class VectorStoreService:
         return self.vector_store.as_retriever(
             search_kwargs={"k":4}
         )
+
+    
+    def delete_collection(self):
+        client = PersistentClient(path="chroma_db")
+        client.delete_collection("about_me_ai")
