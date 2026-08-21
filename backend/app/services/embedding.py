@@ -4,18 +4,35 @@ from app import config
 import os
 
 
+# class EmbeddingService:
+
+#     def __init__(self):
+#         # api_key = os.getenv("GOOGLE_API_KEY")
+#         # if not api_key:
+#         #     raise ValueError("GOOGLE_API_KEY is not set. Check your .env file.")
+#         # self.embeddings = GoogleGenerativeAIEmbeddings(
+#         #     model="models/gemini-embedding-001"
+#         # )
+#         self.embeddings = HuggingFaceEmbeddings(
+#             model_name="sentence-transformers/all-MiniLM-L6-v2"
+#         )
+
+#     def get_embeddings(self):
+#         return self.embeddings
+
+
 class EmbeddingService:
 
-    def __init__(self):
-        # api_key = os.getenv("GOOGLE_API_KEY")
-        # if not api_key:
-        #     raise ValueError("GOOGLE_API_KEY is not set. Check your .env file.")
-        # self.embeddings = GoogleGenerativeAIEmbeddings(
-        #     model="models/gemini-embedding-001"
-        # )
-        self.embeddings = HuggingFaceEmbeddings(
-            model_name="sentence-transformers/all-MiniLM-L6-v2"
-        )
+    _embeddings = None
 
-    def get_embeddings(self):
-        return self.embeddings
+    @classmethod
+    def get_embeddings(cls):
+
+        if cls._embeddings is None:
+            print("Loading embedding model...")
+
+            cls._embeddings = HuggingFaceEmbeddings(
+                model_name="sentence-transformers/all-MiniLM-L6-v2"
+            )
+
+        return cls._embeddings
