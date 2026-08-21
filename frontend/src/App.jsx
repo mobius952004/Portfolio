@@ -49,7 +49,7 @@ function App() {
                   </Button>
                 </div>
           {
-            aiOn && <div className=" fixed z-10 right-4 bottom-25 max-h-[1000px] max-w-[500px]   bg-gray-900  border-2 rounded-2xl border-purple-600 shadow-2xl shadow-purple-400 ">
+            aiOn && <div className=" fixed z-20 right-4 bottom-25 max-h-[1000px] max-w-[500px]   bg-gray-900  border-2 rounded-2xl border-purple-600 shadow-2xl shadow-purple-400 ">
              <AIChat messages={messages} setMessages={setMessages} onClose={() => setAiOn(false)}></AIChat>
                   
 

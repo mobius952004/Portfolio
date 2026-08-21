@@ -38,7 +38,7 @@ export default function AIChat({messages,setMessages,onClose}) {
     // 2. Define contextual starter options
     const starterOptions = [
         "What AI and deep learning projects have you built?",
-        "Tell me about the Multi chat application you have  build .",
+        "Tell me about the Multi chat application.",
         "What are your core full-stack technologies?"
     ];
 
