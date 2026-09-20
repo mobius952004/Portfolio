@@ -39,7 +39,7 @@ export default function NavBar() {
       {/* Right: Action Button */}
       <div className="pointer-events-auto">
         <Button asChild className="bg-purple-600 hover:bg-purple-500 text-white rounded-full px-6 py-5 border border-purple-500/50 transition-all duration-300 shadow-[0_0_15px_rgba(168,85,247,0.3)] hover:shadow-[0_0_25px_rgba(168,85,247,0.5)] hover:-translate-y-0.5">
-         <a href="/pdf/Resume2.pdf" target="_blank" rel="noopener noreferrer">
+         <a href="/pdf/Resume-S.pdf" target="_blank" rel="noopener noreferrer">
       <Download className="mr-2 h-4 w-4" />
       Resume
          </a>
