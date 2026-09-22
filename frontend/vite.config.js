@@ -11,9 +11,8 @@ export default defineConfig({
 
 
   ],
-  server:{
-    open:`/connect`,
-    host:true
+  server: {
+    host: true
   },
     resolve: {
     alias: {

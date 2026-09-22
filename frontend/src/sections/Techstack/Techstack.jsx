@@ -3,7 +3,7 @@ import { useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
-import { FaReact, FaPython, FaDatabase } from "react-icons/fa";
+import { FaReact, FaPython, FaDatabase ,FaGithub} from "react-icons/fa";
 import { BsRobot } from "react-icons/bs";
 import { SiTailwindcss } from "react-icons/si";
 import { GrJava ,GrNode } from "react-icons/gr";
@@ -19,55 +19,75 @@ const skillsData = [
     icon: <GrJava /> 
   },
   {
-    id: 1,
+    id: 2,
     name: "Python",
     category: "",
     description: "Backend and AI/ML.",
     icon: <FaPython /> 
   },
   {
-    id: 1,
+    id: 3,
     name: "JS &Node",
     category: "Bakcend ",
     description: "Backend for Applications.",
     icon: <GrNode /> 
   },
   {
-    id: 1,
+    id: 4,
     name: "React.js",
     category: "Frontend",
     description: "Building responsive, component-driven user interfaces and dynamic single-page applications.",
     icon: <FaReact /> 
   },
-
   {
-    id: 2,
+    id: 5,
     name: "Flask & FastAPI",
     category: "Backend",
     description: "Developing robust API endpoints, routing, and scalable server-side architecture.",
     icon: <FaPython />
   },
   {
-    id: 3,
+    id: 6,
     name: "Deep Learning",
     category: "AI/ML",
     description: "Implementing CNNs, RNNs, LSTM to Analyze and predict .",
     icon: <FaDatabase />
   },
   {
-    id: 4,
+    id: 7,
     name: "LangChain & Ollama",
     category: "Generative AI",
     description: "Constructing Agentic AI workflows and integrating large language models into production environments.",
     icon: <BsRobot />
   },
   {
-    id: 5,
+    id: 8,
     name: "Tailwind CSS",
     category: "Design",
     description: "Crafting modern, responsive, and maintainable utility-first design systems.",
     icon: <SiTailwindcss />
-  }
+  },
+  {
+    id: 9,
+    name: "Machine Learning",
+    category: "AI/ML ",
+    description: "Using machine learning Practices  for predictions , analysis, Data Augmentation , Deep learning etc.",
+    icon: <BsRobot />
+  },
+  {
+    id: 10,
+    name: "Lang-Graph",
+    category: "Agentic systems",
+    description: "using Langgraph for building complex applications",
+    icon: <BsRobot />
+  },
+  {
+    id: 11,
+    name: "Version Control",
+    category: "Version Control",
+    description: "using Git and GitHub for version control ",
+    icon: <FaGithub />
+  },
 ];
 
 export default function Techstack() {
@@ -76,31 +96,32 @@ export default function Techstack() {
 
   useGSAP(() => {
     const getScrollAmount = () => {
+      if (!sliderRef.current) return 0;
       let sliderWidth = sliderRef.current.scrollWidth;
-      return -(sliderWidth - window.innerWidth + 80); 
+      return Math.max(0, sliderWidth - window.innerWidth + 100); 
     };
 
     const tween = gsap.to(sliderRef.current, {
-      x: getScrollAmount,
+      x: () => -getScrollAmount(),
       ease: "none"
     });
 
     ScrollTrigger.create({
       trigger: sectionRef.current,
       start: "top top", 
-      end: () => `+=${getScrollAmount() * -2}`, 
+      end: () => `+=${Math.max(getScrollAmount() * 1.5, 1200)}`, 
       pin: true, 
       pinSpacing: true, 
       animation: tween,
-      scrub: 1,  
+      scrub: 1.5,  
       invalidateOnRefresh: true 
     });
   }, { scope: sectionRef });
 
   return (
-    <section id="skills" className="bg-transparent text-gray-200">
+    <section id="skills" ref={sectionRef} className="relative bg-transparent text-gray-200">
       
-      <div ref={sectionRef} className="h-screen flex flex-col justify-center overflow-hidden">
+      <div className="h-screen flex flex-col justify-center overflow-hidden">
         
         {/* Static Header Section */}
         <div className="px-6 md:px-12 mb-8 relative z-10">

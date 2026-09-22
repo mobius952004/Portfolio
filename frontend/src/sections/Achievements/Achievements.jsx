@@ -4,7 +4,7 @@ export default function Achievements() {
       id: 1,
       title: " Online Project based Internship  ",
       issuer: "",
-      description: "Mastered foundational deep learning concepts, including CNNs, RNNs, and hyperparameter tuning.",
+      description: "A full stack Developement Project based internship ",
       image: "/images/cert-1.jpg"
     },
     {

@@ -90,21 +90,21 @@ export default function About() {
           {/* Block 1 */}
           <div className=" overflow-hidden p-1">
             <p className="scroll-reveal text-white">
-              I'm a Computer Science student specializing in AI & Machine Learning with a strong interest in building practical software. I enjoy combining AI with full-stack development to create applications that solve real problems rather than just demonstrate models.
+              I'm a Computer Science student specializing in AI & Machine Learning with a strong interest in software engineering. I enjoy building intelligent systems that combine AI capabilities with robust backend architecture and modern web applications to solve real-world problems.
             </p>
           </div>
           
           {/* Block 2 */}
           <div className="overflow-hidden p-1">
             <p className="scroll-reveal text-gray-400">
-             Over the  years, I've worked on projects involving LLMs, RAG pipelines,Machine Learning, computer vision, and modern web development. I like understanding how systems work end-to-end—from backend APIs and databases to responsive user interfaces and AI integration.
+             Over the years, I've worked on projects spanning agentic AI, RAG systems, large language models, machine learning, and full-stack development. My experience includes building multi-agent platforms, AI-powered developer tools, real-time applications, and scalable APIs using technologies such as React, Node.js, FastAPI, MongoDB, vector databases, and modern AI frameworks. I enjoy understanding systems end-to-end—from data flow and backend services to user experience and AI integration.
             </p>
           </div>
           
           {/* Block 3 */}
-          <div className="overflow-hidden p-1">
+          <div className="overflow-hidden ">
             <p className="scroll-reveal text-gray-500 text-xl md:text-2xl mt-4">
-              I'm currently focused on learning more about agentic AI, distributed systems, and scalable backend architecture while continuing to build projects that improve both my engineering skills and problem-solving approach.
+              Currently, I'm focused on deepening my knowledge of distributed systems, scalable backend architecture, retrieval systems, and AI agents. I enjoy tackling challenging problems, learning new technologies quickly, and building products that combine strong engineering principles with practical impact.
             </p>
           </div>
           
