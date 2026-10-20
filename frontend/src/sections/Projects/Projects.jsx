@@ -113,7 +113,7 @@ return (
 
             {/* Section Header */}
             <div className="px-6 md:px-12 mb-10 relative z-10 text-right">
-                <h2 className="text-purple-400 font-bold tracking-widest uppercase text-sm mb-2 mt-2">
+                <h2 className="text-purple-400 font-bold tracking-widest uppercase text-sm mb-2 mt-4">
                     Featured Work
                 </h2>
                 <h3 className="text-4xl md:text-6xl font-bold text-white">
